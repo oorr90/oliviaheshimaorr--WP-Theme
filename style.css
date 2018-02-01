@@ -133,7 +133,7 @@ HOME PAGE: NAME AND PHOTO
 
 .home-name {
     background-color: #e8e6e3;
-    background-image: url("../img/me2.png");
+    background-image: url("assets/img/me2.png");
     background-size: contain;
     background-repeat: no-repeat;
     height: 600px;
