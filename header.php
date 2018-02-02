@@ -13,7 +13,6 @@
     
     ?>
     
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Condensed" rel="stylesheet">
     
     <!-- PAGE META TITLE / DESCRIPTION -->
     <title><?php echo get_bloginfo('name'); ?> | <?php echo get_the_title(); ?></title>
