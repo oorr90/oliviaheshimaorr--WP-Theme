@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
     
+    
     <!-- PAGE META TITLE / DESCRIPTION -->
     <title><?php echo get_bloginfo('name'); ?> | <?php echo get_the_title(); ?></title>
 		<meta name="description" content="Welcome to Olivia's website..." />
@@ -24,14 +25,40 @@
    
     <header>
         <div class="header-logo">
-           <img src="<?php echo get_stylesheet_directory_uri(); ?>assets/img/oho-logo-transparent.png" alt="red circular logo with initials">
+            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/oho-logo-transparent.png" alt="Red circular logo with initials"></a>
         </div>
-        <nav>
-            <ul>
+        
+        <nav role="navigation">
+           <?php
+                //Call the menu created in the admin panel
+                    //use this for a simple site with only one menu
+                    //It calls the first menu by default
+                wp_nav_menu(); 
+                
+            
+            ?>
+           
+            <!--<ul>
                 <li><a href="index.php" class="selected">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">My Work</a></li>
                 <li><a href="#">Contact</a></li>
-            </ul>
+            </ul>-->
         </nav>
     </header>
+    
+   
+  
+ 
+
+
+
+
+
+
+
+
+
+
+
+
