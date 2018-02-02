@@ -33,17 +33,17 @@
                 //Call the menu created in the admin panel
                     //use this for a simple site with only one menu
                     //It calls the first menu by default
-                wp_nav_menu(); 
+                //wp_nav_menu(); 
+            
+                //Or add parameters to specify the menu
+                // Parameters: developer.wordpress.org/reference/functions/wp_nav_menu/
+            wp_nav_menu(array(
+                'theme_location' => 'primary',
+                'menu_class' => 'primary_nav'
+            ));
                 
             
             ?>
-           
-            <!--<ul>
-                <li><a href="index.php" class="selected">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">My Work</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>-->
         </nav>
     </header>
     
