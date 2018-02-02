@@ -7,16 +7,18 @@
     <!--<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico" />-->
     
     <!-- LOAD CSS -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>assets/css/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Condensed" rel="stylesheet">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/style.css">
+    <?php
     
+        wp_head();
+    
+    ?>
+    
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Roboto+Condensed" rel="stylesheet">
     
     <!-- PAGE META TITLE / DESCRIPTION -->
     <title><?php echo get_bloginfo('name'); ?> | <?php echo get_the_title(); ?></title>
 		<meta name="description" content="Welcome to Olivia's website..." />
     
-    <?php wp_head(); ?>
         
 </head>
 <body>

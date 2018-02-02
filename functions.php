@@ -1,5 +1,21 @@
 <?php
 
+//Include custom CSS file in the header
+
+function olivia_script_enqueue() {
+    
+    //The enqueue style hook has 5 params
+    wp_enqueue_style('normalize', get_template_directory_uri() . '/assets/css/normalize.css', array(), '1.0.0', 'all');
+    
+    wp_enqueue_style('stylesheet', get_template_directory_uri() . '/assets/css/stylesheet.css', array(), '1.0.0', 'all');
+}
+
+
+add_action('wp_enqueue_scripts', 'olivia_script_enqueue');
+
+
+
+
 //Gotta create that custom menu
     // Nice tutorial: www.youtube.com/watch?v=Sz0z-Gyp3nA
 
