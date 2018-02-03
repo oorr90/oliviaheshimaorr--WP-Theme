@@ -4,15 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!--<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/favicon.ico" />-->
-    
-    <!-- LOAD CSS -->
-    <?php
-    
-        wp_head();
-    
-    ?>
-    
+    <?php wp_head(); ?>
     
     <!-- PAGE META TITLE / DESCRIPTION -->
     <title><?php echo get_bloginfo('name'); ?> | <?php echo get_the_title(); ?></title>

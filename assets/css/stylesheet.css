@@ -7,6 +7,16 @@ body {
     background-color: #f4f3f0;
 }
 
+
+
+
+/**************************************
+
+OVERALL STYLES
+
+***************************************/
+
+
 img {
     width: 100%;
     max-width: 100%;
@@ -33,7 +43,8 @@ h6 {
     padding: 0;
     text-transform: uppercase;
     font-family: 'Roboto Condensed', sans-serif;
-    transition: all 0.5s ease-out;
+    transition: all 0.15s ease-out;
+    color: #bf3a2e;
 }
 
 p {
@@ -43,52 +54,45 @@ p {
 
 
 
-/**********************************
+
+/**************************************
 
 HEADER
 
-**********************************/
+***************************************/
+
+
+/*******   HEADER LOGO   **************/
 
 header {
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
+    background-color: #f2f0ed;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #F2F0ED;
 }
 
 .header-logo {
     width: 100px;
-    margin-right: 10px;
     transition: all 1s ease-out;
 }
 
 
 
-/**********************************
-
-NAV
-
-**********************************/
+/*******   NAVIGATION   **************/
 
 nav {
-    background-color: #F2F0ED;
+    text-transform: uppercase;
 }
 
 nav a {
     color: #a5a5a5;
+    font-family: 'Roboto Condensed', sans-serif;
     font-size: 1.15em;
     font-weight: 700;
     transition: all 1s ease-out;
     padding: 5px;
     letter-spacing: 2px;
-}
-
-.current-menu-item a {
-    color: #BF3A2E;
 }
 
 nav ul {
@@ -100,10 +104,10 @@ nav li {
     padding: 0 1em;
 }
 
-
-nav a:hover {
-    color: #BF3A2E;
+.current-menu-item a, nav a:hover {
+    color: #bf3a2e;
 }
+
 
 
 
@@ -138,6 +142,8 @@ HOME PAGE: NAME AND PHOTO
 }
 
 
+
+
 /**********************************
 
 HOME PAGE: MAIN
@@ -150,25 +156,19 @@ main {
 
 .home-links {
     padding: 0 100px;
-    height: 560px;
+    height: 600px;
 }
 
 .home-block {
     color: #a5a5a5;
-    font-size: 1.1em;
     margin-top: 100px;
     width: 40%;
     min-width: 300px;
     max-width: 450px;
-    text-align: center;
 }
 
 .home-block h2 {
-    color: #bf3a2e;
-    letter-spacing: 2px;
-}
-
-.home-block p {
+    font-size: 2.5em;
 }
 
 .home-block a {
@@ -181,23 +181,13 @@ main {
     color: #a5a5a5;
 }
 
-/*.welcome, .contact {
-    text-align: right;
-}*/
 
-.introduction {
-    float: right;
-    clear: both;
+
+
+
+.main-page {
+    background-color: #e8e6e3;
 }
-
-.contact {
-    clear: both;
-    float: left;
-}
-
-
-
-
 
 
 
@@ -245,7 +235,7 @@ MEDIA QUERIES
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 880px) {
     
     header {
         display: block;
