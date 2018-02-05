@@ -180,12 +180,24 @@ HOME PAGE: LINKS / BLOCKS
 
 
 
+
+
 .home-links {
     background-color: #e8e6e3;
-    padding: 20px 3.5%;
+    padding: 200px 20px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2em;
 }
 
+.home-links h2 {
+    margin-bottom: 12px;
+}
 
+.home-block {
+    width: 40%;
+    max-width: 500px;
+}
 
 .home-block a, .welcome a {
     font-weight: bold;
@@ -210,7 +222,7 @@ HOME: SOCIAL
 .home-social {
     background-color: #bf3a2e;
     text-align: center;
-    padding: 140px 0 160px;
+    padding: 120px 0 140px;
 }
 
 .home-social h3 {
@@ -226,7 +238,7 @@ HOME: SOCIAL
 }
 
 .home-social-icon {
-    width: 55px;
+    width: 45px;
 }
 
 .home-social-icon img {
@@ -248,10 +260,59 @@ HOME: SOCIAL
 
 .main-page {
     background-color: #e8e6e3;
+    padding: 60px 3.5%;
+}
+
+.wrapper-index {
+    width: 50%;
+    margin: 0 auto;
 }
 
 
 
+/**********************************
+
+PAGE: CONTACT
+
+**********************************/
+
+.contact-page-wrap {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.wpcf7 {
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 700;
+    color: #bf3a2e;
+    overflow: hidden;
+}
+
+.wpcf7 p {
+    margin-top: 20px;
+}
+
+.wpcf7 input[type="text"], .wpcf7 input[type="email"], .wpcf7 textarea {
+    width: 100%;
+    border: none;
+    padding: 10px;
+}
+
+.wpcf7 input:focus, .wpcf7 textarea:focus {
+    outline: none;
+}
+
+.wpcf7-submit {
+    background-color: #bf3a2e;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 120px;
+    padding: 8px;
+    display: inline-block;
+    border: none;
+}
 
 
 
