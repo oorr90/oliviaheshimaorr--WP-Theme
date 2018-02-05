@@ -19,16 +19,27 @@
  <!-- MAIN -->
     
 <main class="main-page">
-    
-    <?php
+
+<!-- I think there is probably a better way of doing this... -->
+ 
+    <?php 
+	   if ( is_page('contact')) { 
+		  echo '<div class="contact-page-wrap">'; 
+	   } 
+
         if (have_posts() ):
             while (have_posts()) : the_post();
                 the_content();
             endwhile;
-        else:
-          echo '<p>Oh heavens, there\'s nothing here!</p>';
+            else:
+            echo '<p>Oh heavens, there\'s nothing here!</p>';
         endif;
+ 
+	   if ( is_page('contact')) { 
+		  echo '</div>'; 
+	   } 
     ?>
+
     
 </main>
     
