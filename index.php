@@ -20,12 +20,14 @@
     
 <main class="main-page">
 
-<!-- I think there is probably a better way of doing this... -->
+
+    <!-- BEGIN INNER WRAPPER -->
+    <div <?php 
+            if ( is_page('contact')) { 
+		      echo 'class="contact-page-wrap"'; 
+	       } ?> >
  
-    <?php 
-	   if ( is_page('contact')) { 
-		  echo '<div class="contact-page-wrap">'; 
-	   } 
+    <?php
 
         if (have_posts() ):
             while (have_posts()) : the_post();
@@ -34,11 +36,11 @@
             else:
             echo '<p>Oh heavens, there\'s nothing here!</p>';
         endif;
- 
-	   if ( is_page('contact')) { 
-		  echo '</div>'; 
-	   } 
+  
     ?>
+    
+    <!-- END INNER WRAPPER -->
+    </div>
 
     
 </main>
