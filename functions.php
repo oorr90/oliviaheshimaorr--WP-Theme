@@ -1,6 +1,6 @@
 <?php
 
-//Include custom CSS file in the header
+//INCLUDE CUSTOM CSS
 function olivia_script_enqueue() {
     
     //The enqueue style hook has 5 params
@@ -15,7 +15,7 @@ add_action('wp_enqueue_scripts', 'olivia_script_enqueue');
 
 
 
-//Include Google Fonts
+//INCLUDE GOOGLE FONTS
 function custom_add_google_fonts() {
     wp_register_style( 'google', 'https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:400regular,700bold', array(), null, 'all' );
     wp_enqueue_style('google');
@@ -24,7 +24,7 @@ add_action('wp_enqueue_scripts', 'custom_add_google_fonts');
 
 
 
-//Gotta create that custom menu
+//GOTTA CREATE THAT CUSTOM MENU
     // Nice tutorial: www.youtube.com/watch?v=Sz0z-Gyp3nA
 function olivia_theme_setup() {
     add_theme_support('menus');
@@ -35,34 +35,56 @@ add_action('after_setup_theme', 'olivia_theme_setup');
 
 
 
-//Create Portfolio Page custom post type
-function my_portfolio() {
-    $args = array(
-      'label' => 'My Portfolio',
-        'public' => true,
-        'show_ui' => true,
-        'capability_type' => 'post',
-        'hierarchical' => false,
-        'rewrite' => array('slug' => 'portfolio'),
-        'query_var' => true,
-        'menu_icon' => 'dashicons-admin-post',
-        'supports' => array(
-            'title',
-            'editor',
-            'excerpt',
-            'trackbacks',
-            'custom-fields',
-            'comments',
-            'revisions',
-            'thumbnail',
-            'author',
-            'page-attributes',)
-        );
-    register_post_type( 'portfolio', $args );
+// ENABLE FEATURED IMAGES
+add_theme_support( 'post-thumbnails' );
+
+
+
+//REGISTER PORTFOLIO POST TYPE
+function cptui_register_my_cpts_portfolio() {
+
+	/**
+	 * Post Type: Portfolio.
+	 */
+
+	$labels = array(
+		"name" => __( "Portfolio", "min" ),
+		"singular_name" => __( "Portfolio", "min" ),
+		"menu_name" => __( "My Portfolio", "min" ),
+		"all_items" => __( "All Portfolio Items", "min" ),
+	);
+
+	$args = array(
+		"label" => __( "Portfolio", "min" ),
+		"labels" => $labels,
+		"description" => "Display portfolio items (graphic design and web)",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => false,
+		"rest_base" => "",
+		"has_archive" => false,
+		"show_in_menu" => true,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"rewrite" => array( "slug" => "portfolio", "with_front" => true ),
+		"query_var" => true,
+        "menu_position" => 5,
+		"supports" => array( "title", "editor", "thumbnail" ),
+	);
+
+	register_post_type( "portfolio", $args );
 }
-add_action( 'init', 'my_portfolio' );
+
+add_action( 'init', 'cptui_register_my_cpts_portfolio' );
 
 
+
+
+
+//GET PROJECT LIST
 
 
 
