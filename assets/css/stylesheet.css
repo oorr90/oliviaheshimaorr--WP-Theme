@@ -49,6 +49,8 @@ h6 {
 
 p {
     line-height: 1.5;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -146,40 +148,99 @@ HOME PAGE: NAME AND PHOTO
 
 /**********************************
 
-HOME PAGE: MAIN
+HOME PAGE: LINKS / BLOCKS
 
 **********************************/
 
-main {
-    padding-bottom: 100px;
+.welcome {
+    text-align: center;
+    height: 400px;
+    padding-top: 200px;
 }
+
+.welcome h2 {
+    font-size: 3.5em;
+    display: inline-block;
+    border-top: 5px solid #bf3a2e;
+    border-bottom: 5px solid #bf3a2e;
+    padding: 10px 0;
+    margin-bottom: 40px;
+}
+
+.welcome p {
+    color: #bf3a2e;
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.welcome img {
+    width: 45px;
+    margin-top: 100px;
+}
+
+
 
 .home-links {
-    padding: 0 100px;
-    height: 600px;
+    background-color: #e8e6e3;
+    padding: 20px 3.5%;
 }
 
-.home-block {
-    color: #a5a5a5;
-    margin-top: 100px;
-    width: 40%;
-    min-width: 300px;
-    max-width: 450px;
-}
 
-.home-block h2 {
-    font-size: 2.5em;
-}
 
-.home-block a {
+.home-block a, .welcome a {
     font-weight: bold;
     color: #bf3a2e;
     transition: all 1s ease-out;
 }
 
-.home-block a:hover {
+.home-block a:hover, .welcome a:hover {
     color: #a5a5a5;
 }
+
+
+
+
+
+/**********************************
+
+HOME: SOCIAL
+
+**********************************/
+
+.home-social {
+    background-color: #bf3a2e;
+    text-align: center;
+    padding: 140px 0 160px;
+}
+
+.home-social h3 {
+    color: #fff;
+    font-size: 2em;
+}
+
+.home-social-inner {
+    width: 50%;
+    margin: 90px auto 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.home-social-icon {
+    width: 55px;
+}
+
+.home-social-icon img {
+    -webkit-transition: -webkit-transform .7s ease-in-out;
+        transition: transform .7s ease-in-out;
+}
+
+.home-social-icon img:hover {
+    -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+}
+
+
+
 
 
 
@@ -279,14 +340,9 @@ MEDIA QUERIES
         font-size: .4em;
     }
     
-    .home-links {
-        padding: 0 8%;
-    }
     
-    .home-block {
-        width: 100%;
-        text-align: left;
-    }
+    
+    
     
     .introduction, .contact {
         float: none;
