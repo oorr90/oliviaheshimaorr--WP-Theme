@@ -26,7 +26,7 @@
 
         <section class="home-block">
             <h2>Say Hi</h2>
-            <p>Feel free to <a href="<?php echo site_url(); ?>/contact">contact me</a> or take a look around to learn more.</p>
+            <p>Let's build something together. Feel free to <a href="<?php echo site_url(); ?>/contact">contact me</a> or take a look around to learn more about my work.</p>
         </section>
     </div>
     
