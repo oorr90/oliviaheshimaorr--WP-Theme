@@ -21,7 +21,7 @@
     <div class="home-links">
         <section class="home-block">
             <h2>Introduction</h2>
-            <p>I am based in Portland, Maine. When I'm not on my grind at my 9:00 - 5:00 job, I continually push to improve my <a href="<?php echo site_url(); ?>/about">programming and design</a> skills.</p>
+            <p>I am based in Portland, Maine. When I'm not on my grind at my 9:00 - 5:00 job, I continually push to improve my programming and design skills.</p>
         </section>
 
         <section class="home-block">
