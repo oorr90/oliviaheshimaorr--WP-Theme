@@ -35,8 +35,33 @@ add_action('after_setup_theme', 'olivia_theme_setup');
 
 
 
+
+
 // ENABLE FEATURED IMAGES
 add_theme_support( 'post-thumbnails' );
+
+
+
+
+
+//GET PROJECT LIST
+function get_project_list() {
+    
+    global $wpdb;
+    
+    $projects = array();
+    
+    $sql = "SELECT * FROM `cmbyn_posts` WHERE `post_type` = 'portfolio' and `post_status` = 'publish'";
+    
+    $posts = $wpdb -> get_results($sql);
+    
+    
+    
+}
+
+
+
+
 
 
 
@@ -63,7 +88,7 @@ function cptui_register_my_cpts_portfolio() {
 		"show_ui" => true,
 		"show_in_rest" => false,
 		"rest_base" => "",
-		"has_archive" => false,
+		"has_archive" => true,
 		"show_in_menu" => true,
 		"exclude_from_search" => false,
 		"capability_type" => "post",
@@ -82,9 +107,6 @@ add_action( 'init', 'cptui_register_my_cpts_portfolio' );
 
 
 
-
-
-//GET PROJECT LIST
 
 
 
