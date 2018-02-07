@@ -24,14 +24,26 @@ add_action('wp_enqueue_scripts', 'custom_add_google_fonts');
 
 
 
+//DISPLAY TITLE TAG
+add_theme_support( 'title-tag' );
+
+
+
 //GOTTA CREATE THAT CUSTOM MENU
     // Nice tutorial: www.youtube.com/watch?v=Sz0z-Gyp3nA
 function olivia_theme_setup() {
     add_theme_support('menus');
-    register_nav_menu('primary', 'Main Navigation'); //Add location and description
+    register_nav_menu('primary', 'Primary Nav'); //Add location and description
 }
 //Execute olivia_theme_setup after the setup
 add_action('after_setup_theme', 'olivia_theme_setup');
+
+
+
+
+
+
+
 
 
 
@@ -44,20 +56,7 @@ add_theme_support( 'post-thumbnails' );
 
 
 
-//GET PROJECT LIST
-function get_project_list() {
-    
-    global $wpdb;
-    
-    $projects = array();
-    
-    $sql = "SELECT * FROM `cmbyn_posts` WHERE `post_type` = 'portfolio' and `post_status` = 'publish'";
-    
-    $posts = $wpdb -> get_results($sql);
-    
-    
-    
-}
+
 
 
 
