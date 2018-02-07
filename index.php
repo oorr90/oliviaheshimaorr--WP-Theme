@@ -36,8 +36,9 @@
             else:
             echo '<p>Oh heavens, there\'s nothing here!</p>';
         endif;
-  
+    
     ?>
+    
     
     <!-- END INNER WRAPPER -->
     </div>

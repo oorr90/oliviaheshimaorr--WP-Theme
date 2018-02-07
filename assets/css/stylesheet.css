@@ -314,6 +314,10 @@ PAGE: CONTACT
     border: none;
 }
 
+.wpcf7-submit:hover {
+    cursor: pointer;
+}
+
 
 
 /**********************************
@@ -323,14 +327,14 @@ FOOTER
 **********************************/
 
 footer {
-    background-color: #e8e6e3;
+    background-color: #f2f0ed;
     text-align: center;
     padding: 30px 0;
     text-transform: uppercase;
 }
 
 footer p {
-    color: #fff;
+    color: #a5a5a5;
 }
 
 
