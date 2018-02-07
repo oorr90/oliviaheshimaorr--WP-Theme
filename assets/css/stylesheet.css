@@ -278,7 +278,12 @@ PAGE: CONTACT
 
 .contact-page-wrap {
     width: 50%;
+    min-width: 400px;
     margin: 0 auto;
+}
+
+.wpcf7-form {
+    margin-top: 50px;
 }
 
 .wpcf7 {
@@ -436,6 +441,12 @@ MEDIA QUERIES
     
     .home-social-icon {
         width: 35px;
+    }
+    
+    .contact-page-wrap {
+        width: 85%;
+        min-width: 250px;
+        margin: 0 auto;
     }
 
     
