@@ -325,6 +325,22 @@ PAGE: CONTACT
 
 
 
+
+
+
+/**********************************
+
+PAGE: PORTFOLIO ARCHIVE
+
+**********************************/
+
+.portfolio-thumb img {
+    width: 200px;
+    height: 200px;
+}
+
+
+
 /**********************************
 
 FOOTER

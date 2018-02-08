@@ -40,22 +40,8 @@ add_action('after_setup_theme', 'olivia_theme_setup');
 
 
 
-
-
-
-
-
-
-
-
-
 // ENABLE FEATURED IMAGES
 add_theme_support( 'post-thumbnails' );
-
-
-
-
-
 
 
 
@@ -74,12 +60,12 @@ function cptui_register_my_cpts_portfolio() {
 	$labels = array(
 		"name" => __( "Portfolio", "min" ),
 		"singular_name" => __( "Portfolio", "min" ),
-		"menu_name" => __( "My Portfolio", "min" ),
-		"all_items" => __( "All Portfolio Items", "min" ),
-	);
+        "add_new" => __("Add Portfolio Item", "min"),
+		"menu_name" => __( "Portfolio", "min" ),
+		"all_items" => __( "All Portfolio Items", "min" )	
+    );
 
 	$args = array(
-		"label" => __( "Portfolio", "min" ),
 		"labels" => $labels,
 		"description" => "Display portfolio items (graphic design and web)",
 		"public" => true,
@@ -96,7 +82,13 @@ function cptui_register_my_cpts_portfolio() {
 		"rewrite" => array( "slug" => "portfolio", "with_front" => true ),
 		"query_var" => true,
         "menu_position" => 5,
-		"supports" => array( "title", "editor", "thumbnail" ),
+		"supports" => array( 
+            "title", 
+            "editor",
+            "excerpt",
+            "revisions",
+            "thumbnail"
+        ),
 	);
 
 	register_post_type( "portfolio", $args );
