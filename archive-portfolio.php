@@ -4,11 +4,18 @@
      * This is the template for displaying portfolio items
      */
 
+    $projects = get_project_list();
+
+    echo "<!--";
+    print_r($projects);
+    echo "-->";
+
+
     echo get_header();
 
 ?>
 
-<main>
+<main class="main-page">
     
     <?php
     
@@ -16,22 +23,38 @@
     
     ?>
     
+    
+    <!-- SORT PROJECTS HERE -->
+    <div class="archive-contain">
+    
     <?php
     
-     if (have_posts() ):
-            while (have_posts()) : the_post();
-                echo "<h3>"; 
-                the_title();
-                echo "</h3>";
-                echo "<div class='portfolio-thumb'>";
-                the_post_thumbnail();
-                echo "</div>";
-            endwhile;
-            else:
-            echo '<p>Oh heavens, there\'s nothing here!</p>';
-        endif;
+        foreach($projects as $project) {
+            
+            ?>
+            
+            
+            
+            <div class='project-link'>
+            <a href="<?php echo $project -> permalink ?>">
+             
+            <h2 class="project-link-title"><?php echo $project -> post_title; ?></h2>
+            
+            <img src="<?php echo $project -> image_paths[large]; ?>" alt="">
+            
+            <?php
+                
+            ?>
+            
+            <?php
+            echo "</a></div>";
+            
+        }
+    
     ?>
-
+    
+    
+    </div>
     
 </main>
 

@@ -1,6 +1,12 @@
 <?php
 
+
+
+
  echo get_header();
+
+
+
 
  ?>
 
@@ -19,6 +25,7 @@
      <?php
         
         the_title();
+        
 
         ?>
      

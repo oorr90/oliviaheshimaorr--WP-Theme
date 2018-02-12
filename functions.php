@@ -47,6 +47,69 @@ add_theme_support( 'post-thumbnails' );
 
 
 
+//GET SINGLE PROJECT
+function get_project($post, $getPosts = true){
+    global $wpdb;
+
+    $post -> additional_fields = get_fields($post -> ID);
+    $post -> thumbnail = get_the_post_thumbnail($post -> ID, array(200));
+    $post -> content_filtered = apply_filters('the_content', $post -> post_content);
+    $post -> permalink = get_permalink($post -> ID);
+    $post -> image_paths = get_image_paths($post -> ID);
+
+    return $post;
+}
+
+
+
+
+
+
+
+
+function get_project_list() {
+    
+    global $wpdb;
+    
+    $projects = array();
+        
+    $sql = 'SELECT * FROM ' . $wpdb -> prefix . 'posts WHERE post_type="portfolio" and post_status="publish"';
+    
+    $posts = $wpdb->get_results($sql);
+
+    foreach ($posts as $post) {
+        $projects[] = get_project($post, false);
+    }
+    
+    
+   return $projects;
+    
+}
+
+
+
+
+
+
+
+
+
+// GET IMAGE SIZES
+function get_image_paths($postId){
+    $photoId = get_post_thumbnail_id($postId);
+    return array(
+        "thumb" => wp_get_attachment_image_src($photoId, 'thumbnail')[0],
+        "medium" => wp_get_attachment_image_src($photoId, 'medium')[0],
+        "large" => wp_get_attachment_image_src($photoId, 'large')[0],
+    );
+} 
+
+
+
+
+
+
+
 
 
 
@@ -85,8 +148,6 @@ function cptui_register_my_cpts_portfolio() {
 		"supports" => array( 
             "title", 
             "editor",
-            "excerpt",
-            "revisions",
             "thumbnail"
         ),
 	);

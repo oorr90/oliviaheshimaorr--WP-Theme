@@ -334,10 +334,36 @@ PAGE: PORTFOLIO ARCHIVE
 
 **********************************/
 
-.portfolio-thumb img {
-    width: 200px;
-    height: 200px;
+
+.archive-contain {
+    margin-top: 100px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
+
+.project-link {
+    margin-bottom: 75px;
+    width: 30%;
+    
+}
+
+.project-link-title {
+    margin-bottom: 25px;
+}
+
+.project-link img {
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
 
 
 
