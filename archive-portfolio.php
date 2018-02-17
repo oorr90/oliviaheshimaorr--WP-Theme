@@ -25,36 +25,78 @@
     
     
     <!-- SORT PROJECTS HERE -->
+    
+    <h2>Websites</h2>
     <div class="archive-contain">
     
     <?php
-    
+        
         foreach($projects as $project) {
             
-            ?>
-            
-            
-            
-            <div class='project-link'>
-            <a href="<?php echo $project -> permalink ?>">
-             
-            <h2 class="project-link-title"><?php echo $project -> post_title; ?></h2>
-            
-            <img src="<?php echo $project -> image_paths[large]; ?>" alt="">
-            
-            <?php
+            if ($project -> additional_fields[project_type] == "Website") {
+                ?>
                 
-            ?>
-            
-            <?php
-            echo "</a></div>";
-            
+                <div class='project-link'>
+                    <a href="<?php echo $project -> permalink ?>">
+
+                    <img src="<?php echo $project -> image_paths[large]; ?>" alt="">
+                
+                </a></div>
+                
+                <?php
+            }
         }
-    
+        
     ?>
     
-    
     </div>
+    
+    <h2>Graphic Design</h2>
+    <div class="archive-contain">
+    <?php
+        
+        foreach($projects as $project) {
+            
+            if ($project -> additional_fields[project_type] == "Print") {
+                ?>
+                
+                <div class='project-link'>
+                    <a href="<?php echo $project -> permalink ?>">
+
+                    <img src="<?php echo $project -> image_paths[large]; ?>" alt="">
+                
+                </a></div>
+                
+                <?php
+            }
+        }
+        
+    ?>   
+    </div>
+    
+    <h2>Other</h2>
+    <div class="archive-contain">
+    <?php
+        
+        foreach($projects as $project) {
+            
+            if ($project -> additional_fields[project_type] == "Video" || $project -> additional_fields[project_type] == "Other") {
+                ?>
+                
+                <div class='project-link'>
+                    <a href="<?php echo $project -> permalink ?>">
+
+                    <img src="<?php echo $project -> image_paths[large]; ?>" alt="">
+                
+                </a></div>
+                
+                <?php
+            }
+        }
+        
+    ?>   
+    </div>
+
     
 </main>
 

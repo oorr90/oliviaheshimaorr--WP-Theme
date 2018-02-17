@@ -336,15 +336,17 @@ PAGE: PORTFOLIO ARCHIVE
 
 
 .archive-contain {
-    margin-top: 100px;
+    margin-top: 20px;
+    margin-bottom: 50px;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: flex-start;
 }
 
 .project-link {
-    margin-bottom: 75px;
+    margin-bottom: 45px;
     width: 30%;
     
 }
