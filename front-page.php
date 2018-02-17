@@ -34,17 +34,53 @@
     <div class="home-social">
         <h3>Connect</h3>
         <div class="home-social-inner">
-            <div class="home-social-icon">
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/github_circle_logo_white.png" alt="White Github logo"></a>
-            </div>
-            <div class="home-social-icon">
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/linkedin_circle_logo_white.png" alt="White LinkedIn logo"></a>
-            </div>
-            <div class="home-social-icon">
-                <a href="#"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/mail_circle_icon_white.png" alt="White send email icon"></a>
-            </div>
+    
+    <?php
+
+    $values = get_field('social_links');
+    
+        if ($values) {
+                        
+            foreach ($values as $value) {
+                
+                echo "<div class='home-social-icon'>";
+                
+                echo "<a href='" . $value['social_icon_link'] . "' target='blank'>";
+                
+                echo "<img src='" . $value['social_icon']['sizes']['medium'] . "' alt='" . $value['social_icon']['alt'] . "'>";
+                
+                echo "</a>";
+                                
+                echo "</div>";
+                
+            }
+        }
+    
+    $email = get_field('email_link');
+            
+            if ($email) {
+                
+                foreach ($email as $emails) {
+                                
+                echo "<div class='home-social-icon'>";
+                
+                echo "<a href='" . $emails['email_link'] . "'>";
+                
+                echo "<img src='" . $emails['email_icon']['sizes']['medium'] . "' alt='" . $emails['email_icon']['alt'] . "'>";
+                
+                echo "</a>";
+                                
+                echo "</div>";
+                }
+                
+            }
+
+
+    ?>
+    
         </div>
     </div>
+    
 </main>
     
 <?php echo get_footer(); ?>

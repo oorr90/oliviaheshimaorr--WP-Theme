@@ -62,35 +62,17 @@ function get_project($post, $getPosts = true){
 
 
 
-
-
-
-
-
 function get_project_list() {
-    
     global $wpdb;
-    
-    $projects = array();
-        
+    $projects = array();  
     $sql = 'SELECT * FROM ' . $wpdb -> prefix . 'posts WHERE post_type="portfolio" and post_status="publish"';
-    
     $posts = $wpdb->get_results($sql);
 
     foreach ($posts as $post) {
         $projects[] = get_project($post, false);
     }
-    
-    
-   return $projects;
-    
+    return $projects;
 }
-
-
-
-
-
-
 
 
 
@@ -103,13 +85,6 @@ function get_image_paths($postId){
         "large" => wp_get_attachment_image_src($photoId, 'large')[0],
     );
 } 
-
-
-
-
-
-
-
 
 
 
