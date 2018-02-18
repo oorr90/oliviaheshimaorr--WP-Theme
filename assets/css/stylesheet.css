@@ -270,6 +270,30 @@ HOME: SOCIAL
 
 
 
+
+
+/**********************************
+
+PAGE: ABOUT
+
+**********************************/
+
+.about-page-wrap {
+    
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 200px;
+    max-width: 600px;
+    min-width: 400px;
+    
+}
+
+.about-page-wrap h1 {
+    margin-bottom: 20px;
+}
+
+
+
 /**********************************
 
 PAGE: CONTACT
@@ -347,7 +371,7 @@ PAGE: PORTFOLIO ARCHIVE
 
 .project-link {
     margin-bottom: 45px;
-    width: 30%;
+    width: 22%;
     
 }
 
