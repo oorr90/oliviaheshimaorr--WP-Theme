@@ -75,7 +75,6 @@ function get_project_list() {
 }
 
 
-
 // GET IMAGE SIZES
 function get_image_paths($postId){
     $photoId = get_post_thumbnail_id($postId);
@@ -85,6 +84,23 @@ function get_image_paths($postId){
         "large" => wp_get_attachment_image_src($photoId, 'large')[0],
     );
 } 
+
+
+
+function get_social_icons() {
+    
+    global $wpdb;
+    $icons = array();  
+    $sql = 'SELECT * FROM ' . $wpdb -> prefix . 'posts WHERE post_name="home" and post_status="publish"';
+    $icons = $wpdb->get_results($sql);
+
+    
+    return $icons;
+    
+    
+    
+}
+
 
 
 

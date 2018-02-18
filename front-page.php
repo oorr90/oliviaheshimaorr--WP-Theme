@@ -1,6 +1,6 @@
 <?php
  echo get_header();
- ?>
+?>
 
 
  <!-- MAIN -->
@@ -37,44 +37,26 @@
     
     <?php
 
-    $values = get_field('social_links');
+    $values = get_field('social_icon');
     
-        if ($values) {
-                        
+        if ($values) {                    
             foreach ($values as $value) {
                 
                 echo "<div class='home-social-icon'>";
                 
-                echo "<a href='" . $value['social_icon_link'] . "' target='blank'>";
-                
-                echo "<img src='" . $value['social_icon']['sizes']['medium'] . "' alt='" . $value['social_icon']['alt'] . "'>";
-                
-                echo "</a>";
-                                
-                echo "</div>";
-                
-            }
-        }
-    
-    $email = get_field('email_link');
-            
-            if ($email) {
-                
-                foreach ($email as $emails) {
-                                
-                echo "<div class='home-social-icon'>";
-                
-                echo "<a href='" . $emails['email_link'] . "'>";
-                
-                echo "<img src='" . $emails['email_icon']['sizes']['medium'] . "' alt='" . $emails['email_icon']['alt'] . "'>";
-                
-                echo "</a>";
-                                
-                echo "</div>";
+                if ($value['link_type'] == 'Absolute') {
+                    echo "<a href='" . $value['link_absolute'] . "'>";
+                } else {
+                    echo "<a href='" . $value['link_relative'] . "'>";
                 }
                 
+                echo "<img src='" . $value['link_image']['sizes']['medium'] . "'" . "alt='" . $value['link_image']['alt'] . "'>";
+                echo "</a></div>";
             }
-
+            
+        } else {
+            echo "Social links coming soon!";
+        }
 
     ?>
     
