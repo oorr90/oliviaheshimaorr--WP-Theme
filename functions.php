@@ -87,22 +87,6 @@ function get_image_paths($postId){
 
 
 
-function get_social_icons() {
-    
-    global $wpdb;
-    $icons = array();  
-    $sql = 'SELECT * FROM ' . $wpdb -> prefix . 'posts WHERE post_name="home" and post_status="publish"';
-    $icons = $wpdb->get_results($sql);
-
-    
-    return $icons;
-    
-    
-    
-}
-
-
-
 
 //REGISTER PORTFOLIO POST TYPE
 function cptui_register_my_cpts_portfolio() {
