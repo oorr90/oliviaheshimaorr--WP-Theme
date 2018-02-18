@@ -25,7 +25,11 @@
     <div <?php 
             if ( is_page('contact')) { 
 		      echo 'class="contact-page-wrap"'; 
-	       } ?> >
+	       } else if (is_page('about')) {
+                echo 'class=about-page-wrap';
+            }
+         
+         ?> >
  
     <?php
 
