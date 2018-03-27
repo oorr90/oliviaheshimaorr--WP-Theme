@@ -11,26 +11,14 @@
 </div>
 
 <main>
-    
-    <section class="welcome">
-        <h2>Welcome</h2>
-        <p>Hi, I'm Olivia and I like to <a href="<?php echo site_url(); ?>/portfolio">create things</a>.</p>
-        <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/down_arrow.png" alt="White Github logo">
-    </section>      
-    
-    <div class="home-links">
-        <section class="home-block">
-            <h2>Introduction</h2>
-            <p>I am based in Portland, Maine. When I'm not on my grind at my 9:00 - 5:00 job, I continually push to improve my programming and design skills.</p>
-        </section>
 
-        <section class="home-block">
-            <h2>Say Hi</h2>
-            <p>Let's build something together. Feel free to <a href="<?php echo site_url(); ?>/contact">contact me</a> or take a look around to learn more about my work.</p>
-        </section>
+    <div class="home-intro">
+        <h2>Hi, I'm Olivia and I like to <a href="<?php echo site_url(); ?>/portfolio">create things</a>.</h2>
+        <h3>Intro</h3>
+        <div class="line"></div>
+        <p>I am based in Portland, Maine. When I'm not on my grind at my 9:00 - 5:00 job, I continually push to improve my programming and design skills.</p>
     </div>
-    
-    
+     
     <div class="home-social">
         <h3>Connect</h3>
         <div class="home-social-inner">
