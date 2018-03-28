@@ -2,7 +2,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'PT Sans', 'Helvetica Neue' , sans-serif;
+    font-family: 'Poppins', 'Helvetica Neue' , sans-serif;
     font-size: 100%;
     background-color: #f4f3f0;
 }
@@ -51,8 +51,8 @@ p {
     line-height: 1.5;
     padding: 0;
     margin: 0;
+    color: #a5a5a5;
 }
-
 
 
 
@@ -157,7 +157,6 @@ HOME PAGE: LINKS / BLOCKS
     background-color: #fff;
     padding: 140px 10%;
     text-align: center;
-    color: #a5a5a5;
     text-transform: uppercase;
 }
 
@@ -468,6 +467,16 @@ MEDIA QUERIES
 
 @media screen and (max-width: 575px) {
     
+    .home-name {
+        font-size: .3em;
+        background-size: cover;
+    }
+    
+    .home-name h1 {
+        margin-left: 10%;
+        padding-top: 80px;
+    }
+    
     .home-intro {
         padding: 80px 6%;
     }
@@ -482,11 +491,6 @@ MEDIA QUERIES
     
     .home-intro p {
         font-size: .85em;
-    }
-    
-    .home-name {
-        height: 325px;
-        font-size: .5em;
     }
     
     .home-social {
@@ -509,3 +513,5 @@ MEDIA QUERIES
 
     
 }
+
+

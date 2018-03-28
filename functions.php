@@ -1,5 +1,8 @@
 <?php
 
+//HIDE ADMIN BAR IN FRONT END WHEN LOGGED IN
+add_filter('show_admin_bar', '__return_false');
+
 //INCLUDE CUSTOM CSS
 function olivia_script_enqueue() {
     
@@ -17,7 +20,7 @@ add_action('wp_enqueue_scripts', 'olivia_script_enqueue');
 
 //INCLUDE GOOGLE FONTS
 function custom_add_google_fonts() {
-    wp_register_style( 'google', 'https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Condensed:400regular,700bold', array(), null, 'all' );
+    wp_register_style( 'google', 'https://fonts.googleapis.com/css?family=Poppins:400,700|Roboto+Condensed:400regular,700bold', array(), null, 'all' );
     wp_enqueue_style('google');
 }
 add_action('wp_enqueue_scripts', 'custom_add_google_fonts');
@@ -84,8 +87,6 @@ function get_image_paths($postId){
         "large" => wp_get_attachment_image_src($photoId, 'large')[0],
     );
 } 
-
-
 
 
 //REGISTER PORTFOLIO POST TYPE
