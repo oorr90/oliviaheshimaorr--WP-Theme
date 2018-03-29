@@ -23,7 +23,7 @@
      
     <h3>Preview coming soon!</h3>
     <div class="line"></div>
-    <h4><a href="<?php echo site_url(); ?>/portfolio">Go Back</a></h4>
+    <h4><a href="<?php echo home_url(); ?>/portfolio">Go Back</a></h4>
     <!-- END INNER WRAPPER -->
     </div>
 

@@ -13,7 +13,7 @@
 <main>
 
     <div class="home-intro">
-        <h2>Hi, I'm Olivia and I like to <a href="<?php echo site_url(); ?>/portfolio">create things</a>.</h2>
+        <h2>Hi, I'm Olivia and I like to <a href="<?php echo home_url(); ?>/portfolio">create things</a>.</h2>
         <h3>Intro</h3>
         <div class="line"></div>
         <p>I am based in Portland, Maine. When I'm not on my grind at my 9:00 - 5:00 job, I continually push to improve my programming and design skills.</p>
