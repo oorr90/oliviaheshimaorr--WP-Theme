@@ -17,20 +17,13 @@
 
 
     <!-- BEGIN INNER WRAPPER -->
-    <div <?php 
-            if ( is_page('contact')) { 
-		      echo 'class="contact-page-wrap"'; 
-	       } ?> >
+    <div class="archive-inner">
  
-     <?php
-        
-        the_title();
-        
-
-        ?>
      
-    
-    
+     
+    <h3>Preview coming soon!</h3>
+    <div class="line"></div>
+    <h4><a href="<?php echo site_url(); ?>/portfolio">Go Back</a></h4>
     <!-- END INNER WRAPPER -->
     </div>
 

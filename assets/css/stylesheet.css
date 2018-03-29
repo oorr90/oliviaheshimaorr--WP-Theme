@@ -2,7 +2,7 @@ body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', 'Helvetica Neue' , sans-serif;
+    font-family: 'Helvetica Neue' , sans-serif;
     font-size: 100%;
     background-color: #f4f3f0;
 }
@@ -172,7 +172,7 @@ HOME PAGE: LINKS / BLOCKS
     margin: 0 auto;
 }
 
-.home-intro .line {
+.line {
     background-color: #bf3a2e;
     height: 2.5px;
     width: 24px;
@@ -274,7 +274,6 @@ PAGE: ABOUT
 **********************************/
 
 .about-page-wrap {
-    
     width: 70%;
     margin: 0 auto;
     padding-bottom: 200px;
@@ -283,7 +282,7 @@ PAGE: ABOUT
     
 }
 
-.about-page-wrap h1 {
+.about-page-wrap h2, .contact-page-wrap h2 {
     margin-bottom: 20px;
 }
 
@@ -353,29 +352,37 @@ PAGE: PORTFOLIO ARCHIVE
 
 **********************************/
 
-
 .archive-contain {
-    margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
+    padding: 20px;
     text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
-.project-link {
-    margin-bottom: 45px;
-    width: 22%;
-    
+.archive-contain h1 {
+    color: #bf3a2e;
+    font-size: 3.5em;
+    margin-bottom: 80px;
 }
 
-.project-link-title {
-    margin-bottom: 25px;
+.archive-contain h1 span {
+    color: #bf3a2e;
 }
 
-.project-link img {
-    max-width: 100%;
+.project-link a, .project-link h4 {
+    color: #a5a5a5;
+}
+
+.project-link h4 {
+    margin-bottom: 6px;
+    padding: 4px;
+}
+
+
+
+.archive-inner {
+    padding-top: 200px;
+    height: 300px;
+    text-align: center;
 }
 
 
@@ -505,11 +512,17 @@ MEDIA QUERIES
         width: 35px;
     }
     
-    .contact-page-wrap {
+    .contact-page-wrap, .about-page-wrap {
         width: 85%;
         min-width: 250px;
         margin: 0 auto;
     }
+    
+    .archive-contain h1 {
+        font-size: 2.75em;
+        margin-bottom: 40px;
+    }
+    
 
     
 }

@@ -19,6 +19,10 @@
  <!-- MAIN -->
     
 <main class="main-page">
+   
+    <!--<div class="main-page-title">
+    <h1><?php echo $post -> post_title; ?></h1>
+    </div>-->
 
 
     <!-- BEGIN INNER WRAPPER -->
