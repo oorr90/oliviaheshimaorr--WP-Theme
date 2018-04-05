@@ -27,30 +27,38 @@
     <!-- SORT PROJECTS HERE -->
     <div class="archive-contain">
     <h1>Websites</h1>
-    <h3>Explore on the web</h3>
     <div class="line"></div>
-    
-    <?php
-        
-        foreach($projects as $project) {
-            
-            if ($project -> additional_fields[project_type] == "Website") {
-                ?>
-                
-                <div class='project-link'>
-                    <a href="<?php echo $project -> additional_fields[website_link]; ?>" target="_blank">
+        <div class="wrap-projects">
+        <?php
 
-                        <h4><?php echo $project -> post_title; ?></4>
-                
-                </a></div>
-                
-                <?php
+            foreach($projects as $project) {
+
+                if ($project -> additional_fields[project_type] == "Website") {
+                    ?>
+
+                    <div class='single-project'>
+                       <div class="single-project-image">
+                            <a href="<?php echo $project -> additional_fields[website_link]; ?>" target="_blank"><img src="<?php echo $project -> image_paths[medium]; ?>" class="image"></a>
+
+                            <a href="<?php echo $project -> additional_fields[website_link]; ?>" target="_blank"><div class="slider">
+                                <div class="slider-text">Visit Website</div>
+                            </div></a>
+                        </div>
+                        <h3><?php echo $project -> post_title; ?></h3>
+                        
+                        <a href="<?php echo $project -> permalink ?>" class="more-link">
+                        <h4>Project details</h4>
+                        </a>
+                    </div>
+
+                    <?php
+                }
             }
-        }
-        
-    ?>
-    
+
+        ?>
+        </div>
     </div>
+
     
     <div class="archive-contain">
     <h1>Graphics</h1>

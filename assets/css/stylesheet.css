@@ -368,11 +368,11 @@ PAGE: PORTFOLIO ARCHIVE
     color: #bf3a2e;
 }
 
-.project-link a, .project-link h4 {
+.project-link a, .project-link h4, .single-project h4, .single-project a {
     color: #a5a5a5;
 }
 
-.project-link h4 {
+.project-link h4, .single-project h4 {
     margin-bottom: 6px;
     padding: 4px;
 }
@@ -388,7 +388,75 @@ PAGE: PORTFOLIO ARCHIVE
 
 
 
+.wrap-projects {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
 
+.single-project {
+    width: 200px;
+    margin: 10px;
+}
+
+.single-project h3 {
+    margin: 20px 0 8px;
+    color: #a5a5a5;
+}
+
+.single-project h4 {
+    color: #bf3a2e;
+    display: inline-block;
+    padding: 0 0 2px 0;
+}
+
+.single-project-image {
+    position: relative;
+    box-shadow: 3px 3px 3px #444;
+
+}
+
+.single-project-image .image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.slider {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.single-project-image:hover .image {
+  opacity: 0.6;
+}
+
+.single-project-image:hover .slider {
+  opacity: 1;
+}
+
+.slider-text {
+    background-color: #f2f2f2;
+    color: #bf3a2e;
+    font-size: 16px;
+    padding: 12px 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.more-link:hover {
+    border-bottom: 2px solid #bf3a2e;
+}
 
 
 
@@ -528,3 +596,14 @@ MEDIA QUERIES
 }
 
 
+@media screen and (max-width: 475px) {
+    
+    .slider {
+        display: none;
+    }
+    
+    .single-project {
+        margin-bottom: 50px;
+    }
+    
+}
